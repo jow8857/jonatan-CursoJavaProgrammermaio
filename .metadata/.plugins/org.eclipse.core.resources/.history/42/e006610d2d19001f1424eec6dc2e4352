@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.jws.Oneway;
-
 import entidade.Animal;
 
 public class Principal {
@@ -21,22 +19,17 @@ public class Principal {
 		System.out.println("digite o peso do animal");
 
 		objetoanimal.peso = Integer.parseInt(entradaDeDados.next());
-		
-		
-		objetoanimal.preco = CalcularPrecoAnimal(objetoanimal.peso);
 
+		objetoanimal.preco = CalcularPrecoAnimal(objetoanimal.peso);
 
 		Imprimir(objetoanimal);
 
 	}
-	
-	
-public static double CalcularPrecoAnimal(int peso) {
-	double preco = peso * 50;
-    return preco;
-}
 
-
+	public static double CalcularPrecoAnimal(int peso) {
+		double preco = peso * 50;
+        return preco;
+	}
 
 	public static void Imprimir(Animal objetoanimal) {
 		System.out.println("o nome do animal é " + objetoanimal.nome);
