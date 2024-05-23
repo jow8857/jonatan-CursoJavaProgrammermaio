@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+import entidade.Animal;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		Scanner entradaDeDados = new Scanner(System.in);
+		Animal objetoanimal = new Animal();
+
+		System.out.println("Digite o nome do Animal: ");
+
+		objetoanimal.nome = entradaDeDados.next();
+
+		System.out.println("Digite a idade do Animal: ");
+
+		objetoanimal.idade = Integer.parseInt(entradaDeDados.next());
+
+		System.out.println("digite o peso do animal");
+
+		objetoanimal.peso = Integer.parseInt(entradaDeDados.next());
+
+		CalcularPrecoAnimal(objetoanimal);
+		
+		Imprimir(objetoanimal);
+
+	}
+
+
+	public static double CalcularPrecoAnimal(Animal objetoanimal){
+		Double precoAnimal = objetoanimal.peso * 50.0;
+
+				return precoAnimal;}
+						
+	
+	public static void Imprimir(Animal objetoanimal){
+		System.out.println("o nome do animal é " + objetoanimal.nome);
+		System.out.println("a idade do animal e " + objetoanimal.idade);
+		System.out.println("digite o peso do animal" + objetoanimal.peso);
+		System.out.println("o preço do animal é" + objetoanimal.preco);
+		
+	}
+}
