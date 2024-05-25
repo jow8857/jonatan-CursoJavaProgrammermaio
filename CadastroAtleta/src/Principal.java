@@ -1,48 +1,42 @@
 import java.util.Scanner;
 
-import javax.jws.Oneway;
-
 import entidade.Animal;
+import entidade.Cachorro;
+import entidade.Cobra;
+
+
 
 public class Principal {
 	public static void main(String[] args) {
 
 		Scanner entradaDeDados = new Scanner(System.in);
-		Animal objetoanimal = new Animal();
-
-		System.out.println("Digite o nome do Animal: ");
-
-		objetoanimal.nome = entradaDeDados.next();
-
-		System.out.println("Digite a idade do Animal: ");
-
-		objetoanimal.idade = Integer.parseInt(entradaDeDados.next());
-
-		System.out.println("digite o peso do animal");
-
-		objetoanimal.peso = Integer.parseInt(entradaDeDados.next());
+		
+		Cachorro objcachorro = new Cachorro();
+		
+		Cobra objcobra = new Cobra();
 		
 		
-		objetoanimal.preco = CalcularPrecoAnimal(objetoanimal.peso);
-
-
-		Imprimir(objetoanimal);
-
-	}
+		System.out.println("digite a cor do cachorro ");
+		objcachorro.setCorPelo(entradaDeDados.next());
+		
+		System.out.println("a cor do cao é " + objcachorro.getCorPelo());
+		
+		System.out.println("essa cobra é venenosa ? sim para venenosa não para não venenosa");
+		objcobra.setTipoVeneno(entradaDeDados.next());
+		
+		System.out.println("venenosa? " + objcobra.getTipoVeneno());
+		
 	
+		
+		
+		
+		
+		
+
+
+		
+
+
+		
 	
-public static double CalcularPrecoAnimal(int peso) {
-	double preco = peso * 50;
-    return preco;
-}
-
-
-
-	public static void Imprimir(Animal objetoanimal) {
-		System.out.println("o nome do animal é " + objetoanimal.nome);
-		System.out.println("a idade do animal e " + objetoanimal.idade);
-		System.out.println("o peso do animalé " + objetoanimal.peso);
-		System.out.println("o preço do animal é " + objetoanimal.preco);
-
-	}
-}
+}}

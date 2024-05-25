@@ -1,0 +1,21 @@
+package entidade;
+
+public class Cachorro extends Animal {
+
+	public Cachorro() {
+		super();
+		
+	}
+
+	private String cor;
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+
+}

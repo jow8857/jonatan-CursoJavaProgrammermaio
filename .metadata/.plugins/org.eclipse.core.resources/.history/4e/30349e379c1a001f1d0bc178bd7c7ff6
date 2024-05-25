@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+import entidade.Animal;
+import entidade.Cachorro;
+import entidade.Cobra;
+
+
+
+public class Principal {
+	public static void main(String[] args) {
+
+		Scanner entradaDeDados = new Scanner(System.in);
+		
+		Cachorro cachorro = new Cachorro();
+		
+		
+		System.out.println("digite a cor do cachorro ");
+		Cachorro.CorPelo(entradaDeDados.next());
+		
+		
+		
+		
+		
+
+
+		
+
+
+		
+	
+}}

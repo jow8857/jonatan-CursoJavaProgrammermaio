@@ -1,0 +1,19 @@
+package entidade;
+
+public class Cobra extends Animal {
+ private String TipoVeneno;
+
+public Cobra(String nome, String tipoVeneno) {
+	super(nome);
+	TipoVeneno = tipoVeneno;
+}
+
+public Cobra(String nome){
+	super(nome);
+	}
+
+ 
+ 
+ 
+ 
+}

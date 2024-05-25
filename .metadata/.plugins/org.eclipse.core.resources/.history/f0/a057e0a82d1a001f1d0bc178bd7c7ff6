@@ -1,0 +1,26 @@
+package entidade;
+
+public class Cachorro extends Animal {
+	
+private String cor;
+
+public Cachorro(String nome, String cor) {
+	super(nome);
+	this.cor = cor;
+}
+
+
+public char[] Animal() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+ 
+
+
+
+
+
+
+}

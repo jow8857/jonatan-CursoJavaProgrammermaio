@@ -1,0 +1,7 @@
+package entidade;
+
+private class extends Animal {
+	
+private String CorPelo;
+
+}

@@ -1,0 +1,21 @@
+package entidade;
+
+public abstract class Animal {
+	
+	private String nome;
+	private int idade;
+	private int peso;
+	private double preco;
+	
+	
+	public Animal(String nome) {
+		super();
+		this.nome = nome;
+	}
+	
+	
+	
+
+}
+
+
