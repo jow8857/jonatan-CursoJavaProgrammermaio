@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import entidade.Animal;
 import entidade.Cachorro;
 import entidade.Cobra;
@@ -9,22 +11,26 @@ import entidade.Cobra;
 public class Principal {
 	public static void main(String[] args) {
 
-		Scanner entradaDeDados = new Scanner(System.in);
 		
 		Cachorro objcachorro = new Cachorro();
 		
 		Cobra objcobra = new Cobra();
 		
 		
-		System.out.println("digite a cor do cachorro ");
-		objcachorro.setCorPelo(entradaDeDados.next());
+		//System.out.println("digite a cor do cachorro ");
+		JOptionPane.showMessageDialog(null, "Caracteriscas do cahorro");
 		
-		System.out.println("a cor do cao é " + objcachorro.getCorPelo());
 		
-		System.out.println("essa cobra é venenosa ? sim para venenosa não para não venenosa");
-		objcobra.setTipoVeneno(entradaDeDados.next());
+		objcachorro.setCorPelo(JOptionPane.showInputDialog("digite a cor do cachorro "));
 		
-		System.out.println("venenosa? " + objcobra.getTipoVeneno());
+		//System.out.println("essa cobra é venenosa ? sim para venenosa não para não venenosa");
+		
+		objcobra.setTipoVeneno(JOptionPane.showInputDialog("essa cobra é venenosa ? "));
+		
+		JOptionPane.showMessageDialog(null, "a cordo do cachorro é " + objcachorro.getCorPelo());
+		
+		JOptionPane.showMessageDialog(null, "venenosa? " + objcobra.getTipoVeneno());
+	
 		
 	
 		

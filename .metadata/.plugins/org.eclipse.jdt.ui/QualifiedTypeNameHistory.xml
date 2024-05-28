@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="entidade.Animal"/>
-<fullyQualifiedTypeName name="javax.jws.Oneway"/>
+    <fullyQualifiedTypeName name="entidade.Animal"/>
+    <fullyQualifiedTypeName name="javax.jws.Oneway"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

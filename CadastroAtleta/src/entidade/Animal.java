@@ -7,7 +7,7 @@ public abstract class Animal {
 	private int peso;
 	private double preco;
 	
-	public void setNome(String nome) {
+	public void setNome(String nome,) {
 		this.nome = nome;
 	}
 	public int getIdade() {
