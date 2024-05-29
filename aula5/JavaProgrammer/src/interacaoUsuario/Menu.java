@@ -1,8 +1,13 @@
 package interacaoUsuario;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+
+import entidades.Cachorro;
+import entidades.Cobra;
 
 public class Menu {
 
@@ -10,47 +15,37 @@ public class Menu {
 
 		CaracteristicasAnimais caracteristicasanimais = new CaracteristicasAnimais();
 
-		
+		Cachorro Cachorrolist = new Cachorro();
+		List<Cachorro> CachorroLista = new ArrayList<Cachorro>();
 
-		/*
-		 * if (opcao == 1) { // SE A OPÇÃO DIGITADA FOR 1
-		 * caracteristicasanimais.CaracteristicaCachorro();// VAI EXECUTAR ESSA LINHA }
-		 * if (opcao == 2) { caracteristicasanimais.CaracteristicaCobra(); }
-		 * 
-		 * if (opcao != 1 || opcao != 2) { JOptionPane.showMessageDialog(null,
-		 * "Insira 1 ou 2"); }
-		 */
-boolean menuResultado = true; 
-		
-	
-		while (menuResultado) {
-			
-			int opcao = Integer.parseInt(JOptionPane.showInputDialog("Digite 1 para Cobra e Qualquer Tecla para cahorro:"));			
-			
-			switch (opcao) { 
-			case 1: { 
-				caracteristicasanimais.CaracteristicaCachorro();
+		boolean menuResultado = true;
+
+		while (true) {
+
+			int opcao = Integer.parseInt(JOptionPane.showInputDialog("Digite 1 para cahorro" + "\n"
+					+ "digite 2 para Cobra" + "\n" + "digite 3 para imprimir Cor do Cachorro" + "\n"));
+
+			switch (opcao) {
+			case 1: {
+				Cachorrolist = caracteristicasanimais.CaracteristicaCachorro();
+				CachorroLista.add(Cachorrolist);
 				break;
 			}
 			case 2: {
-				 caracteristicasanimais.CaracteristicaCobra();
+				caracteristicasanimais.CaracteristicaCobra();
 				break;
 			}
-			case 3: { 
-				System.exit(0);
+			case 3: {
+				caracteristicasanimais.imprimirCachorro(CachorroLista);
 				break;
 			}
-			default: 
+			default:
 				JOptionPane.showMessageDialog(null, "Insira 1 ou 2");
-			
+
 				break;
 			}
-			
-			
-			if(opcao == 1 || opcao == 2) {
-				menuResultado = false;
-			}
-			
+
 		}
 
-	}}
+	}
+}
