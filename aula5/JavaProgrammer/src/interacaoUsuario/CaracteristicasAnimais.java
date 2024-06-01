@@ -18,9 +18,19 @@ public class CaracteristicasAnimais {
 
 	
 		JOptionPane.showMessageDialog(null, "Caracteriscas do cahorro");
-        objcachorro.setCorPelo(JOptionPane.showInputDialog("digite a cor do cachorro "));
-		
-		return objcachorro;
+                          objcachorro.setCorPelo(JOptionPane.showInputDialog("digite a cor do cachorro "));
+       
+         boolean entradaValida = true;                 
+         while (entradaValida)    {             
+         try {                 
+        objcachorro.setPreco(Double.parseDouble(JOptionPane.showInputDialog("digite o preço do cachorro ")));
+        entradaValida = false;
+         } catch(NumberFormatException  e) {
+        	 System.out.println("favor digitar o preço");
+         } 		 
+         }
+    
+				return objcachorro;
 	}
 
 	public void imprimirCachorro(List<Cachorro> CachorroLista) {
@@ -44,5 +54,13 @@ public class CaracteristicasAnimais {
 		JOptionPane.showMessageDialog(null, "venenosa? " + objcobra.getTipoVeneno());
         return objcobra;
 	}
+	
+	public void imprimirCobra() {
+		
+		
+		
+	}
+	
+	
 
 }

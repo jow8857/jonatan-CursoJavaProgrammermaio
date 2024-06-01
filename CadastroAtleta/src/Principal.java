@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 import javax.swing.JOptionPane;
 
 import entidade.Animal;
@@ -22,6 +23,8 @@ public class Principal {
 		
 		
 		objcachorro.setCorPelo(JOptionPane.showInputDialog("digite a cor do cachorro "));
+		
+	    objcachorro.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite o Preço do Cachorro"));
 		
 		//System.out.println("essa cobra é venenosa ? sim para venenosa não para não venenosa");
 		

@@ -1,8 +1,0 @@
-package entidade;
-
-public class Cachorro extends Animal {
-
-	private String CorPelo;
-
-
-}
