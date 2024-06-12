@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 import GerenciaArquivo.ManipularArquivo;
+import bancoDeDados.DaoCadastroCachorro;
+import bancoDeDados.DaoCadastroCobra;
 import entitis.Cobra;
 
 public class ControllerSalvarCobra implements ActionListener {
@@ -14,6 +16,7 @@ public class ControllerSalvarCobra implements ActionListener {
 	JTextField donaCobra;
 	
 	ManipularArquivo arquivo = new ManipularArquivo();
+	DaoCadastroCobra daoCadastroCobra = new DaoCadastroCobra();
 	
 	
 	public ControllerSalvarCobra(JTextField textNomeCobra, JTextField textCpfCobra,
@@ -42,7 +45,8 @@ public class ControllerSalvarCobra implements ActionListener {
 		Cobra.setDoc(cpfCobra.getText());
 		Cobra.setVenenosa(donaCobra.getText());
 		
-		arquivo.salvarCadCobra(Cobra);
+		//arquivo.salvarCadCobra(Cobra);
+		daoCadastroCobra.CadastrarCobraDb(Cobra);
 		
 	}
 

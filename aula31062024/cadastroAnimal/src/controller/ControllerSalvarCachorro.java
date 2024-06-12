@@ -6,8 +6,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 import GerenciaArquivo.ManipularArquivo;
+import bancoDeDados.DaoCadastroCachorro;
 import entitis.Animal;
 import entitis.Cachorro;
+import repositorio.CachorroRepositorioImp;
 
 public class ControllerSalvarCachorro extends Animal implements ActionListener {
 	
@@ -16,6 +18,8 @@ public class ControllerSalvarCachorro extends Animal implements ActionListener {
 	JTextField CorDoPelo;
 	
 	ManipularArquivo arquivo = new ManipularArquivo();
+   	
+	CachorroRepositorioImp repositorio = new CachorroRepositorioImp();
 	
 	
 	public ControllerSalvarCachorro(JTextField textNomeCachorro, JTextField textCpfCachorro,
@@ -44,7 +48,10 @@ public class ControllerSalvarCachorro extends Animal implements ActionListener {
 		cachorro.setCorPelo(CorDoPelo.getText());
 		
 
-		arquivo.salvarCadCachorro(cachorro);
+		//arquivo.salvarCadCachorro(cachorro);
+		//daoCadastroCachorro.CadastrarCachorroDb(cachorro);
+		repositorio.CadastrarCachorroDb(cachorro);
+		
 		
 	}
 

@@ -1,5 +1,7 @@
 package telaInicial;
 
+import java.awt.GridLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,9 +18,14 @@ public class CadastroMenuCobra {
 
 	public void cadastroCobra() {
 		JFrame frameCobraCadastro = new JFrame();
-		frameCobraCadastro.setSize(200, 200);
-
 		JPanel panelCadastroCobra = new JPanel();
+		
+		frameCobraCadastro.setSize(200, 200);
+		
+		frameCobraCadastro.setSize(280, 220);
+		panelCadastroCobra.setLayout(new GridLayout(4, 1));
+
+	
 
 		JLabel labelNomeCobra = new JLabel(nomeCobra);
 		panelCadastroCobra.add(labelNomeCobra);

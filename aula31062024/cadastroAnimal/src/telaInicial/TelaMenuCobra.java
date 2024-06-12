@@ -1,5 +1,7 @@
 package telaInicial;
 
+import java.awt.GridLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,6 +19,9 @@ public class TelaMenuCobra {
 		frameMenuCobra.setSize(200, 200);
 
 		JPanel panelCobra = new JPanel();
+		
+		frameMenuCobra.setSize(280, 220);
+		panelCobra.setLayout(new GridLayout(4, 1));
 
 		JLabel opcCadastroCobra = new JLabel("Para cadastrar o Cobra digite 1");
 		panelCobra.add(opcCadastroCobra);

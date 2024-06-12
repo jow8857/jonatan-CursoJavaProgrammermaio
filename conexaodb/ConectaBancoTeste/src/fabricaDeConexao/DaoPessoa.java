@@ -7,9 +7,9 @@ public class DaoPessoa {
 	  public void inserirPessoaDb(Pessoa pessoa) {
 		  ConexaoDB conexaoDb  = new ConexaoDB();
 		   
-		   Connection conectadb1;
+		   Connection conectadb1 = null;
 		  
-		   PreparedStatement praparaQuery;
+		   PreparedStatement praparaQuery = null;
 		   
 		   String query = "insert into teste(cpf, nome, email)values(?, ?, ?)";
 		   
@@ -30,9 +30,19 @@ public class DaoPessoa {
 			System.out.println(e);
 			System.out.println("não foi possivel cadastrar a pessoa");
 		}finally {
+			try {
+				if(conectadb1 != null) {
+					conectadb1.close();//Se objeto connectionBaseExemplo estiver aberto essa linha vai encerrar
+				}
+				if(praparaQuery != null) {//Se objeto preparaOcomandoSQL estiver aberto essa linha vai encerrar
+					praparaQuery.close();
+				}
+				
+			} catch (Exception e2) {
+				System.out.println("Não foi possivel fechar a conexão!!");
+			}
 			
 		}
-	
 	
 	  }
 }
