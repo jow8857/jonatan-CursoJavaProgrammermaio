@@ -2,14 +2,31 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="entidade.Animal"/>
     <fullyQualifiedTypeName name="javax.jws.Oneway"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.util.jar.JarInputStream"/>
     <fullyQualifiedTypeName name="telaInicial.TelaMenuCachorro"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="telaInicial.CadastroMenuCobra"/>
+    <fullyQualifiedTypeName name="telaInicial.TelaInicial"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="telaInicialCobra.TelaMenuCobra"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
+    <fullyQualifiedTypeName name="ViaCepCliente"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.JsonParser"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="service.EntidadeService"/>
+    <fullyQualifiedTypeName name="repositorioCobra.CobraRepositorioImp"/>
+    <fullyQualifiedTypeName name="entitis.Cobra"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="client.ViaCepCliente"/>
+    <fullyQualifiedTypeName name="entitis.CEPEndereco"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="telaInicialCobra.CadastroMenuCobra"/>
 </qualifiedTypeNameHistroy>

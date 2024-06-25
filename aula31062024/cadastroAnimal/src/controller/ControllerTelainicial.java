@@ -7,9 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-
-import telaInicial.TelaMenuCachorro;
-import telaInicial.TelaMenuCobra;
+import telaInicialCachorro.TelaMenuCachorro;
+import telaInicialCobra.TelaMenuCobra;
 
 public class ControllerTelainicial implements ActionListener {
 	JTextField opcdigitada;
