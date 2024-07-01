@@ -1,5 +1,8 @@
 package service;
 
+import entitis.CorrentistaBasico;
+import repository.RepositoryCorrentistaBasicoImp;
+
 public class ServiceCorrentista {
 	
 	double calculo = 0.7;
@@ -20,5 +23,17 @@ public class ServiceCorrentista {
 		}
 		
 		return qtdTextint;
+	}
+	public  CorrentistaBasico ValidarDocNaBase(String cpf) {
+		RepositoryCorrentistaBasicoImp correntistaBasicoImp = new RepositoryCorrentistaBasicoImp();
+		
+		for (CorrentistaBasico correntistaBasico : correntistaBasicoImp.retornaListarCorrentistaBasico()) {
+			if (correntistaBasico.getCpF().equals(cpf)) {
+				return correntistaBasico;
+
+			}
+		}
+
+		return null;
 	}
 }

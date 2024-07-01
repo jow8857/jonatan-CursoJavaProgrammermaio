@@ -8,6 +8,7 @@ import java.util.List;
 
 import conn.ConexaoDb;
 import entitis.CorrentistaBasico;
+import entitis.Endereco;
 
 public class DaoCorrentistaBasico {
 
@@ -64,26 +65,32 @@ public class DaoCorrentistaBasico {
 			while (resutadoSelect.next()) {
 
 				CorrentistaBasico correntistaBasico = new CorrentistaBasico();
+				Endereco endereco = new Endereco();
 
-				
-					correntistaBasico.setNome(resutadoSelect.getString("nome"));
-					correntistaBasico.setCpF(resutadoSelect.getString("cpf"));
-					correntistaBasico.setEmail(resutadoSelect.getString("email"));
-				
-					try {
-						
-						//correntistaBasico.getEndereco().setCEP(resutadoSelect.getString("cep"));
-						correntistaBasico.getEndereco().setLOCALIDADE(resutadoSelect.getString("localidade"));
-						correntistaBasico.getEndereco().setLAGRADOURO(resutadoSelect.getString("lagradouro"));
-						correntistaBasico.getEndereco().setUF(resutadoSelect.getString("uf"));
+				correntistaBasico.setNome(resutadoSelect.getString("nome"));
+				correntistaBasico.setCpF(resutadoSelect.getString("cpf"));
+				correntistaBasico.setEmail(resutadoSelect.getString("email"));
+				try {
 					correntistaBasico.setValorAnuidade(Double.parseDouble(resutadoSelect.getString("valor_anuidade")));
 					correntistaBasico.setqtdTransacao(Integer.parseInt(resutadoSelect.getString("qtd_transacao")));
 					correntistaBasico.setLimiteDeSaque(Double.parseDouble(resutadoSelect.getString("limite_saque")));
+
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+
+				try {
+					endereco.setCEP(resutadoSelect.getString("cep"));
+					endereco.setLOCALIDADE(resutadoSelect.getString("localidade"));
+					endereco.setLAGRADOURO(resutadoSelect.getString("logradouro"));
+					endereco.setUF(resutadoSelect.getString("uf"));
+
 				} catch (Exception e) {
 					System.out.println(e);
 				}
-
+                correntistaBasico.setEndereco(endereco);
 				listaBasico.add(correntistaBasico);
+
 			}
 
 		} catch (Exception e) {
