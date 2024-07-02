@@ -10,5 +10,5 @@ public interface RepositoryCorrentistaBasico {
 	public List<CorrentistaBasico> retornaListarCorrentistaBasico();
 	public boolean alterarCorrentistaBasico(CorrentistaBasico correntistaBasico);
 	public boolean DeletarCorrentistaBasico(String docCorrentistaBasico);
-
+  //interface
 }
