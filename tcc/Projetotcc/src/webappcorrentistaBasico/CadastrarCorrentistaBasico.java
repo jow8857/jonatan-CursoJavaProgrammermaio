@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import controller.CadastrarCorrentistaBasicoControler;
+import controllerCorrentistaBasico.CadastrarCorrentistaBasicoControler;
 
 public class CadastrarCorrentistaBasico {
 

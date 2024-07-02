@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import controller.MenuCorrentistaBasicoController;
+import controllerCorrentistaBasico.MenuCorrentistaBasicoController;
 
 public class TelaCorrentistaBasico {
 	String msgIninial = "<html><div style=text-align 'center'>Banco Java Programmer<br>Selecione a operação a ser realizada</html>";

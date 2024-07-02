@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import controller.AlterarCorrentistaBasicoController;
+import controllerCorrentistaBasico.AlterarCorrentistaBasicoController;
 import entitis.CorrentistaBasico;
 
 public class AlterarBasico {

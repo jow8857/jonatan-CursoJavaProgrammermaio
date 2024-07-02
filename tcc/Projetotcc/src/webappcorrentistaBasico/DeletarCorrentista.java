@@ -10,12 +10,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-import controllerCorrentistaBasico.ListarAlterarCorrentistaBasicoController;
+import controllerCorrentistaBasico.DeletarCorrentistaBasicoController;
 import entitis.CorrentistaBasico;
 import repository.RepositoryCorrentistaBasicoImp;
 
-public class AlterarCorrentistaBasico {
-	public void listarAlterarCorrentistaBasico() {
+public class DeletarCorrentista {
+	
+	public void deletarCorrentistaBasico() {
+		
 		RepositoryCorrentistaBasicoImp correntistaBasicoImp = new RepositoryCorrentistaBasicoImp();
 
 		List<CorrentistaBasico> retornoListar = correntistaBasicoImp.retornaListarCorrentistaBasico();
@@ -82,16 +84,18 @@ public class AlterarCorrentistaBasico {
 		JButton button = new JButton("voltar");
 		panelBasico.add(button);
 
-		JButton alterarCorrentistaBasico = new JButton("Alterar");
-		panelBasico.add(alterarCorrentistaBasico);
+		JButton gerarPdfBasico = new JButton("deletar");
+		panelBasico.add(gerarPdfBasico);
 
 		frameListarBasico.add(panelBasico);
 		frameListarBasico.setVisible(true);
 		
-		ListarAlterarCorrentistaBasicoController alterarCorrentistaBasicoController = new ListarAlterarCorrentistaBasicoController(inputBasico);
-		button.addActionListener(alterarCorrentistaBasicoController);
-		alterarCorrentistaBasico.addActionListener(alterarCorrentistaBasicoController);
-		
-		
+		DeletarCorrentistaBasicoController basicoController = new DeletarCorrentistaBasicoController(inputBasico);
+		gerarPdfBasico.addActionListener(basicoController);
+		button.addActionListener(basicoController);
+		//button.addActionListener(listarCorrentistaBasicoController);
+		//ListarCorrentistaBasicoController listarCorrentistaBasicoController = new ListarCorrentistaBasicoController(inputBasico);
+
+	
 	}
 }

@@ -20,6 +20,22 @@ public class RepositoryCorrentistaBasicoImp implements RepositoryCorrentistaBasi
 		return daoCorrentistaBasico.retornaListarCorrentistaBasico();
 	}
 
+	@Override
+	public boolean alterarCorrentistaBasico(CorrentistaBasico correntistaBasico) {
+		DaoCorrentistaBasico daoCorrentistaBasico = new DaoCorrentistaBasico();
+		daoCorrentistaBasico.alterarCorrentistaBasico(correntistaBasico);
+		
+		return false;
+	}
+
+	@Override
+	public boolean DeletarCorrentistaBasico(String docCorrentistaBasico) {
+		DaoCorrentistaBasico daoCorrentistaBasico = new DaoCorrentistaBasico();
+		daoCorrentistaBasico.DeletarCorrentistaBasico(docCorrentistaBasico);
+		
+		return false;
+	}
+
 
 
 }
